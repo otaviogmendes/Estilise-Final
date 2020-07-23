@@ -1,0 +1,24 @@
+<main class="container">
+    <table class="table table-striped table-dark my-5">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Senha</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Deletar</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let usuario of listaUsuario">
+            <tr>
+                <th scope="row">{{usuario.id}}</th>
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.email}}</td>
+                <td>{{usuario.senha}}</td>
+                <td><a class="btn btn-info" [routerLink]="['/editar',usuario.id]">Editar</a></td>
+                <td><a class="btn btn-outline-danger" [routerLink]="['/deletar', usuario.id]">Deletar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</main>

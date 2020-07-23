@@ -1,0 +1,223 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.btn-estilise {
+    background-color: #158591;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .85);
+}
+.btn-verde {
+    background-color: #147C4C;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .85);
+}
+.btn-roxo {
+    background-color: #1B2F48;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .85);
+}
+p > span {
+    color: #158591;
+}
+
+#header{
+    background: rgb(0,232,211);
+    background: linear-gradient(90deg, rgba(0,232,211,1) 0%, rgba(45,241,223,1) 47%, rgba(143,246,236,1) 100%);
+    height: 90vh;
+    font-family: 'Roboto', sans-serif;
+}
+.img-header {
+    height: auto;
+    width: 95%;
+}
+.img-header > img {
+    height: 100%;
+    width: 100%;
+}
+.arara-header {
+    height: auto;
+    width: 90%;
+}
+.arara-header > img {
+    height: 100%;
+    width: 100%;
+}
+
+.header-texto {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    width:95%;
+}
+#botao_header {
+    display: flex;    
+    width: 100%;
+}
+#botao_header > button {
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: #8daaad;
+    border: 0;
+    border-radius: 3px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+main > h1 {
+    text-align: center;
+    font-size: 80px;
+    color: #168591;
+    font-family: 'Cookie', cursive;
+    
+}
+.card-deck{
+    text-align: center;
+    font-size: 20px;
+}
+.card-beneficio{
+    width: 330px;
+    height: 400px;
+    max-height: 400px;
+    min-height: 350px;
+    text-align: center;
+    border-style: dashed;
+    border-color:#168591;
+    font-size: 15px;
+}
+
+.card-beneficio > svg {
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: svganimation 7s ease-in-out forwards infinite;
+}
+@keyframes svganimation {
+    0% {stroke-dashoffset: 1000;}
+    50% {stroke-dashoffset: 300;}
+    100% {stroke-dashoffset: 0;}
+}
+
+
+h5{
+    color: #168591;
+}
+.img-beneficio{
+    width: auto;
+    height: 130px;
+}
+.img-beneficio > svg, svg > path {
+    max-width: 40px;
+}
+
+article {
+    background: rgb(135,255,238);
+    background: linear-gradient(90deg, rgba(135,255,238,1) 0%, rgba(123,232,186,1) 25%, rgba(149,255,180,1) 50%, rgba(123,232,125,1) 75%, rgba(173,255,135,1) 100%);
+    width: 100%;
+}
+article > div {
+    height: 100%;
+    width: 100%;
+}
+#article-img {
+    height: auto;
+    width: 70%;
+}
+#article-img > img {
+    height: 100%;
+    width: 100%;
+}
+blockquote > p {
+    font-family: 'Cookie', cursive;
+    color: #158591;
+    font-size: 70px;
+}
+blockquote > small {
+    font-family: 'Roboto', sans-serif;
+    color: #158591;
+    font-size: 30px;
+}
+
+#categorias {
+    width: 100%;
+    background: rgb(126,152,206);
+background: linear-gradient(90deg, rgba(126,152,206,1) 0%, rgba(156,141,232,1) 50%, rgba(165,163,235,1) 100%);
+}
+#categorias-img {
+    width: 100%;
+    height: 100%;
+}
+#categorias-img > img {
+    width: auto;
+    height: 90%;
+    max-height: 450px;
+}
+#vendedor {
+    /* background: rgb(255, 255, 255); */
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    /* background: linear-gradient(90deg, rgba(135,255,238,1) 0%, rgb(22, 136, 88) 25%, rgb(91, 92, 177) 50%, rgba(123,232,125,1) 75%, rgba(173,255,135,1) 100%); */
+    width: 100%;
+}
+article > div {
+    height: 100%;
+    width: 100%;
+}
+/* ========= card do produto =========== */
+.card-produto, .card-img, .card-img-adicionar{
+    width: 290px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: #FBF8F8;
+    position: relative;
+    top: 25px; 
+    top: 0;
+}
+.card-produto{
+    height: 377px;
+}
+.card-descricao{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 290px;
+    height: 100px;
+    background-color: #FBF8F8; 
+}
+
+/* ======== Eventos para os cards produtos ========== */
+.card-produto:hover .card-img-adicionar{
+    display: flex!important;
+    width: 42px;
+    height: 40px;
+    border-radius: 3px;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+.card-div-elemento-pai:hover .card-descricao, .card-div-elemento-pai:hover .card-produto{
+    cursor: pointer;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.212);
+}
+.card-div-elemento-pai:hover .card-img{
+    filter: brightness(0.6);
+}
+.card-produto:hover .card-svg-coracao{
+    display: flex!important;
+    width: 35px;
+    height: 32px;
+    right: 70px;
+    top: 15px;
+    border-radius: 3px;
+    position: absolute;
+    fill: white;
+}
+.card-img-adicionar:hover{
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.16);
+}
+.card-svg-coracao:hover{
+    filter: drop-shadow(0px 0px 2px white);
+    transition: 0.10s;
+}

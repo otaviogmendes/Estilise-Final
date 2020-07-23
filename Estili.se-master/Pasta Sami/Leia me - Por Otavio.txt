@@ -1,0 +1,5 @@
+Copie e cole a pasta Sami no booststrap do node modules;
+Estili.se\estilise\node_modules\bootstrap
+
+Importe em Style.css o caminho do boostrap da pasta sami ; 
+@import "~bootstrap/sami/dist/css/bootstrap.css";

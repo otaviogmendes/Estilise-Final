@@ -1,0 +1,18 @@
+<h1>Categorias</h1>
+<h2>Adicionar</h2>
+
+<div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nome categoria</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="categoria.nomecategoria">
+    </div>
+    <div class="form-group">
+        <label for="examplecategoriaimagem">Link da imagem</label>
+        <input type="text" class="form-control" id="examplecategoriaimagem" aria-describedby="emailHelp" [(ngModel)]="categoria.imagemcategoria">
+    </div>
+    <div class="form-group">
+        <label for="examplecategoriadescricao">Descrição categoria</label>
+        <input type="text" class="form-control" id="examplecategoriadescricao" aria-describedby="emailHelp" [(ngModel)]="categoria.descricao">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="publicar()">Adicionar Categoria</button>
+</div>

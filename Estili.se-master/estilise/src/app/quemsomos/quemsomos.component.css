@@ -1,0 +1,275 @@
+#tituloHeader{
+  max-width: 500px;
+}
+@media(max-width: 992px){
+  #texto{
+    font-size: 15px;
+  }
+  video{
+    height: 200px;
+    width: auto;
+  }
+}
+#tituloHeader::after{
+  content:'|' ;
+  margin-left: 5px;
+  opacity: 1;
+   animation: pisca 2s infinite;
+   font-family: "Roboto";
+}
+@keyframes pisca{
+  0%, 100% {
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+}
+#texto::after{
+  content:'|' ;
+  margin-left: 5px;
+  opacity: 1;
+   animation: pisca 2s infinite;
+   font-weight: bolder;
+}
+p{
+  text-align: center;
+  font-family: 'roboto', sans-serif;
+  color:#158591;
+}
+h2 {
+  font-size: 30px;
+  text-align: center;
+  color:#158591;
+}
+#cardSobre{
+  background-size: 100%;
+  background: rgb(244,253,252);
+  background: linear-gradient(90deg, rgba(244,253,252,1) 0%, rgba(248,255,254,1) 50%, rgba(248,255,254,1) 100%);
+  height: 80%;
+  width: 80%;
+  box-shadow: 5px 5px 18px rgba(48, 46, 46, 0.288) ;
+  border: #118899 1px solid;
+}
+#caixa{
+  background-color: none;
+  width: 95%;
+  height: 80%;
+  border: dashed  #118899;
+}
+
+header{
+  min-height: 90vh;
+  width: 100%;
+}
+
+.textoSobre > p {
+font-size: 20px;
+max-width: 70%;
+text-align: center;
+
+}
+h5{
+  color:#158591;
+  font-size: 30px;
+}
+h3{
+  color:#158591;
+  font-size: 45px;
+}
+h4{
+  color: #158591;
+  font-size: 28px;
+  text-align: center;
+}
+li {  
+  list-style: none;
+  margin: 10px,30px;
+  display: inline-block;
+  font-size: 40px;
+  /* padding: 29px; */
+}
+.social{
+  max-width: 35%;
+
+}
+ul.social-network {
+  list-style: none;
+  display: inline;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0;
+  /* padding: 50px; */
+}
+
+.faGithub:hover{
+ 
+color: #064e58;
+}
+
+.faLinkedin:hover{
+
+color: #064e58;
+
+}
+.faGithub,.faLinkedin{
+color: #118899;
+}
+
+.card-deck{
+display: flex;
+flex-wrap: wrap;
+max-width: 900px;
+margin: 0 auto;
+}
+.card-deck > div{
+flex: 1 1 200px;
+}
+#missäo{
+height: 100%;
+width: 100%;
+}
+#visao{
+height: 100%;
+width: 100%;
+}
+#valores{
+height: 100%;
+width: 100%;}
+
+/* _______________________Equipe_________________________ */
+
+.container
+{
+	position: relative;
+	width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.container .box
+{
+	position: relative;
+	width: 280px;
+	height: 400px;
+	margin: 20px 0;
+	box-sizing: border-box;
+  overflow: hidden;
+  
+}
+.container .box .imgBx
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: white;
+	clip-path: circle(600px at center 100px);
+	transition: 0.5s;
+	transition-delay: 0.5s;
+}
+.container .box:hover .imgBx
+{
+	clip-path: circle( 0px at center 180px);
+  transition-delay: 0s;
+}
+.container .box .imgBx img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  object-fit: cover;
+  border: 5px transparent #1097ac;
+  overflow: hidden;
+  float: left;
+  border-radius: 20px;
+}
+.container .box .content
+{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	padding: 25px;
+	box-sizing: border-box;
+  text-align: center;
+}
+.container .box .content h2
+{
+	margin: 0;
+	padding: 0;
+}
+.container .box .content a
+{
+  text-decoration: none;
+	padding: 5px;
+	display: inline-block;
+}
+.container .box .content h2,
+.container .box .content p,
+.container .box .content a
+{
+	opacity: 0;
+	transition: 0.5s;
+	transform: translateY(20px);
+}
+.container .box:hover .content h2
+{
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.5s
+}
+.container .box:hover .content p
+{
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.7s
+}
+.container .box:hover .content a
+{
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.9s
+}
+/* ========================  Estilo do <span> */
+.linhaSpan{ /* tamanho e posição do span que é uma linha */
+  position: relative;
+  display: block;
+  width: 100%; 
+  bottom: 1px; 
+}
+.linhaSpan:before, .linhaSpan:after{/* cor da linha antes e depois com uma duração de 2 segundos*/
+  content: '';
+  height: 4px;
+  bottom: 0px;
+  width: 0;
+  position: absolute;
+  transition: .2s ease all;
+  background: #71f6a6;
+}
+.li-estilo:hover .linhaSpan:after {/* Tamanho da linha quando em foco e depois */
+  width:100%;
+}
+
+/* @keyframes neon{
+  from{
+    filter: drop-shadow(0 0 0 var(--cor-neon));
+  }
+  to{
+    filter: drop-shadow(0 0 5px var(--cor-neon));
+  }
+} */
+/* h2{
+  animation: neon 1s alternate infinite ;
+}
+h2{
+  --cor-neon: #118192;
+} */
+/* social mb-0 list-inline mt-0 y-100 d-flex justify-content:center */

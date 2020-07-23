@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: rgb(0,232,211);
+    background: linear-gradient(90deg, rgba(0,232,211,1) 0%, rgba(45,241,223,1) 47%, rgba(143,246,236,1) 100%);
+    height: 10vh;
+    position: sticky;
+    top:0;
+    z-index: 16;
+}
+
+.navbar-brand {
+    height: 70%;
+    width: auto;
+}
+.navbar-brand > img {
+    height: 100%;
+    width: 100%;
+}
+.nav-item > .btn-light {
+    background-color: white;
+    color: #6ff4e7;
+    padding: 5px;
+    width: 100px;
+}
+
+.nav-item > .btn-outline-light {
+    padding: 5px;
+    width: 100px;
+    color: white;
+    border: 2px white solid;
+}
+
+.nav-item > .btn-outline-light:hover {
+    background-color: #168591;
+    border: #168591;
+    color: white;
+}
+
+.nav-item > .btn-light:hover{
+    color: white;
+    background-color: #168591;
+    border: #168591;
+}
+
+.nav-link {
+    color: white;
+    width: 100%;
+}
+
+.nav-link:hover{
+    color: #168591;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        background: linear-gradient(90deg, rgba(0,232,211,1) 0%, rgba(45,241,223,1) 47%, rgba(143,246,236,1) 100%);
+        height: 100vh;
+    }
+}
+
+
+/* Animate de linha nos itens da nav*/
+.itens-navegar{
+    height: 4em;
+    align-items: center;
+    display: flex;
+    margin-right: 2px; 
+    transition: background-position-x 0.9s linear;
+}
+a{
+    transition: all 0.45s;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.itens-navegar:hover{
+    background: url("../../assets/img/nav/download.svg");
+    background-size: cover;
+    background-repeat: repeat-x;
+    animation: line 1.5s;
+    background-position-y: 6px;
+  }
+.itens-navegar:hover a{
+    color: #168591; 
+}
+
+@keyframes line {
+    0% {
+        background-position-x: 360px;
+    }
+}
+
+/* --------- Dropdown menu perfil ---------------- */
+.dropMenu{
+    height: 60px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* ----- Animação dropdown ----------- */
+@keyframes animateMenu{
+    from{
+        transform: translateY(-3px);
+    }to{
+        transform: translateY(1px);
+    }
+}
+.dropPerfilMenu{
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.18);
+    animation-name: animateMenu;
+    animation-duration: 2s;      
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+/* ========== Carrinho hover ============== */
+.carrinho:hover{
+    fill: #259c87;
+}  
+.excluirProdutoCarrinho:hover{
+    fill: #807c7c!important;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    transition: 0.2s;
+}
+.vermaisProdutosCarrinho:hover{
+    fill: #807c7c!important;
+    cursor: pointer;
+    width: 12px;
+    height: 17px;
+    transition: 0.2s;
+}
+
+/* =========== Img de perfi original ============ */
+.imgPerfil{
+    background-image: url(../../assets/img/nav/perfil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
